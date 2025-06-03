@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Pro: Battle of Minds</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="theme-toggle" id="themeToggle"></div>
+    <h1>OX Legends</h1>
+    <p class="subtitle">Challenge Friends or Outsmart the AI — Let the Ultimate Brain Battle Begin!</p>
+
+    <div class="game-header">
+      <div class="mode-selector">
+        <label for="modeSelect">Game Mode:</label>
+        <select id="modeSelect">
+          <option value="human">Player vs Player</option>
+          <option value="computer" selected>Player vs Computer</option>
+        </select>
+      </div>
+
+      <div class="difficulty-selector">
+        <label for="difficultySelect">AI Difficulty:</label>
+        <select id="difficultySelect">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="player-names" id="playerNames">
+        <label for="playerXName">Player X Name:</label>
+        <input type="text" id="playerXName" placeholder="Player X" value="Player X">
+
+        <label for="playerOName">Player O Name:</label>
+        <input type="text" id="playerOName" placeholder="Player O" value="Player O">
+      </div>
+    </div>
+
+    <div id="game">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div id="status">Player X's turn</div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-value" id="playerWins">0</div>
+        <div class="stat-label">Player Wins</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="computerWins">0</div>
+        <div class="stat-label">Computer Wins</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="draws">0</div>
+        <div class="stat-label">Draws</div>
+      </div>
+    </div>
+
+    <div class="difficulty-info" id="difficultyInfo">
+      Medium AI: Computer will block wins and try to win
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
